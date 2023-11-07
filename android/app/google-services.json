@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1045101896672",
+    "project_id": "gforce-42b39",
+    "storage_bucket": "gforce-42b39.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1045101896672:android:966b973d6a887fe3d40185",
+        "android_client_info": {
+          "package_name": "com.example.flutter_gforce"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-oxqK6V5F0dTbUgwi5niAjs63CjT9s64"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
