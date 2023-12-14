@@ -1,0 +1,23 @@
+{
+    "Stories": "Сторис",
+    "Registration_Successful": "Тіркеу сәтті өтті",
+    "Success": "Сәтті байланыс",
+    "Registration": "Тіркеу",
+    "Full_Name": "ТАӘ",
+    "Email": "Email пошта",
+    "Country": "Ел",
+    "Password": "Құпия сөз",
+    "Register": "Тіркелу",
+    "QR_Data": "QR деректері",
+    "Close": "Жабу",
+    "Toggle_Camera": "Камераны Ауыстыру",
+    "Toggle_Flash": "Шамды Қосу",
+    "Play_Game": "Ойынға кіру",
+    "Go_to_Map": "Картаны Ашыңыз",
+    "Login": "Кіру",
+    "Log": "Тіркелгіге кіру",
+    "Dont_have_an": "Тіркелгі жоқ па? Тіркелу",
+    "Tap": "БАСТАУ ҮШІН БАСЫҢЫЗ",
+    "SCORE": "Көрсеткіш",
+    "BEST": "Үздік"
+}

@@ -46,10 +46,37 @@ dependencies:
   curved_navigation_bar: ^1.0.3
   image_picker: ^1.0.4
   path_provider: ^2.1.1
+  story_view: ^0.15.0
+  qr_code_scanner: ^1.0.1
+  camera: ^0.10.5+5
+  vibration: ^1.8.3
+  firebase_database: ^10.3.4
+  cached_network_image: ^3.3.0
+  flutter_staggered_animations: ^1.1.1
+  firebase_auth_mocks: ^0.13.0
+  firebase_messaging: ^14.7.4
+  provider: ^6.1.1
+  flutter_local_notifications: ^16.1.0
+  google_maps_flutter: ^2.5.0
+  flutter_polyline_points: ^2.0.0
+  location: ^5.0.3
+  easy_localization: ^3.0.3
+  flutter_lints: ^3.0.1
+  retrofit: ^4.0.3
+  json_annotation: ^4.8.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: ^0.13.1
+  retrofit_generator: ^8.0.5
+  json_serializable: ^6.7.1
+  build_runner: ^2.4.7
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: assets/images/icon.png
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -74,6 +101,25 @@ flutter:
     - assets/animation/phoenix.json
     - assets/images/gforce.png
     - assets/images/default-avatar.png
+    - assets/images/image1.jpg
+    - assets/images/image2.jpg
+    - assets/images/image3.jpg
+    - assets/images/image4.jpg
+    - assets/images/image5.jpg
+    - assets/images/image6.jpg
+    - assets/images/image7.jpg
+    - assets/images/image8.jpg
+    - assets/images/image9.jpg
+    - assets/images/image10.jpg
+    - assets/animation/A1.json
+    - assets/animation/A2.json
+    - assets/animation/A3.json
+    - assets/animation/A4.json
+    - assets/images/image11.png
+    - assets/images/image12.png
+    - assets/images/image13.png
+    - assets/translation/
+    - assets/images/icon.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

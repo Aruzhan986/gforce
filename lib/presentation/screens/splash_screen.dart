@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gforce/presentation/constants/constants.dart';
 import 'package:lottie/lottie.dart';
 import 'login_screen.dart';
 
@@ -32,7 +33,7 @@ class _SplashScreenState extends State<SplashScreen> {
             'GFORCE',
             textAlign: TextAlign.center,
             style: TextStyle(
-              color: Color.fromARGB(255, 243, 228, 32),
+              color: PrimaryColors.Colortwo,
               fontSize: 24.0,
               fontWeight: FontWeight.bold,
             ),
@@ -46,9 +47,9 @@ class _SplashScreenState extends State<SplashScreen> {
           Padding(
             padding: EdgeInsets.all(16.0),
             child: LinearProgressIndicator(
-              backgroundColor: Colors.grey[800],
+              backgroundColor: PrimaryColors.Colorsix,
               valueColor: AlwaysStoppedAnimation<Color>(
-                Color.fromARGB(255, 243, 228, 32),
+                PrimaryColors.Colortwo,
               ),
             ),
           ),

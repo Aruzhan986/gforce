@@ -50,6 +50,7 @@ class DefaultFirebaseOptions {
     projectId: 'gforce-42b39',
     authDomain: 'gforce-42b39.firebaseapp.com',
     storageBucket: 'gforce-42b39.appspot.com',
+    databaseURL: 'https://gforce-42b39-default-rtdb.firebaseio.com/',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
@@ -58,6 +59,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '1045101896672',
     projectId: 'gforce-42b39',
     storageBucket: 'gforce-42b39.appspot.com',
+    databaseURL: 'https://gforce-42b39-default-rtdb.firebaseio.com/',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
@@ -67,6 +69,7 @@ class DefaultFirebaseOptions {
     projectId: 'gforce-42b39',
     storageBucket: 'gforce-42b39.appspot.com',
     iosBundleId: 'com.example.flutterGforce',
+    databaseURL: 'https://gforce-42b39-default-rtdb.firebaseio.com/',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
@@ -76,5 +79,6 @@ class DefaultFirebaseOptions {
     projectId: 'gforce-42b39',
     storageBucket: 'gforce-42b39.appspot.com',
     iosBundleId: 'com.example.flutterGforce.RunnerTests',
+    databaseURL: 'https://gforce-42b39-default-rtdb.firebaseio.com/',
   );
 }

@@ -1,8 +1,12 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_gforce/generated/locale_keys.g.dart';
 import 'package:flutter_gforce/presentation/bloc/bloc/authentication_bloc.dart';
 import 'package:flutter_gforce/presentation/bloc/bloc/authentication_event.dart';
 import 'package:flutter_gforce/presentation/bloc/bloc/authentication_state.dart';
+import 'package:flutter_gforce/presentation/constants/constants.dart';
+import 'package:flutter_gforce/utils/lang.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class RegistrationScreen extends StatelessWidget {
@@ -26,7 +30,7 @@ class RegistrationScreen extends StatelessWidget {
               Icon(Icons.check_circle, color: Colors.green),
               SizedBox(width: 8),
               Text(
-                'Success',
+                LocaleKeys.Success.tr(),
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                 ),
@@ -34,9 +38,9 @@ class RegistrationScreen extends StatelessWidget {
             ],
           ),
           content: Text(
-            'Registration Successful!',
+            LocaleKeys.Registration_Successful.tr(),
             style: TextStyle(
-              color: Colors.black54,
+              color: PrimaryColors.Colorthree,
             ),
           ),
           actions: <Widget>[
@@ -44,11 +48,11 @@ class RegistrationScreen extends StatelessWidget {
               child: Text(
                 'OK',
                 style: TextStyle(
-                  color: Colors.green,
+                  color: PrimaryColors.Colorfive,
                 ),
               ),
               style: TextButton.styleFrom(
-                backgroundColor: Colors.white,
+                backgroundColor: PrimaryColors.Colorfour,
               ),
               onPressed: () {
                 Navigator.of(context).pop();
@@ -58,7 +62,7 @@ class RegistrationScreen extends StatelessWidget {
           ],
           actionsPadding: EdgeInsets.symmetric(horizontal: 10),
           elevation: 24.0,
-          backgroundColor: Colors.white,
+          backgroundColor: PrimaryColors.Colorfour,
         );
       },
     );
@@ -67,25 +71,26 @@ class RegistrationScreen extends StatelessWidget {
   void _navigateToHomeScreen(BuildContext context) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool('isRegistered', true);
-
+    await prefs.setString('name', _nameController.text);
+    await prefs.setString('country', _countryController.text);
     Navigator.pushReplacementNamed(context, '/homeScreen');
   }
 
   InputDecoration _buildInputDecoration(String labelText) {
     return InputDecoration(
       labelText: labelText,
-      labelStyle: TextStyle(color: Colors.black),
+      labelStyle: TextStyle(color: PrimaryColors.Colorthree),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(30.0),
-        borderSide: BorderSide(color: Colors.black),
+        borderSide: BorderSide(color: PrimaryColors.Colorthree),
       ),
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(30.0),
-        borderSide: BorderSide(color: Colors.black),
+        borderSide: BorderSide(color: PrimaryColors.Colorthree),
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(30.0),
-        borderSide: BorderSide(color: Colors.black),
+        borderSide: BorderSide(color: PrimaryColors.Colorthree),
       ),
     );
   }
@@ -94,20 +99,12 @@ class RegistrationScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Registration', style: TextStyle(color: Colors.white)),
-        backgroundColor: Colors.black,
-      ),
+          title: Text(LocaleKeys.Registration.tr(),
+              style: TextStyle(color: Colors.white)),
+          backgroundColor: Colors.black,
+          actions: [Lang()]),
       body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [
-              Color.fromARGB(255, 224, 155, 16),
-              Color.fromARGB(255, 255, 233, 64),
-            ],
-          ),
-        ),
+        decoration: BoxDecoration(gradient: PrimaryGradients.primaryGradient),
         child: BlocConsumer<AuthenticationBloc, AuthenticationState>(
           listener: (context, state) {
             if (state is AuthenticationFailure) {
@@ -146,34 +143,37 @@ class RegistrationScreen extends StatelessWidget {
                         SizedBox(height: 32),
                         TextField(
                           controller: _nameController,
-                          decoration: _buildInputDecoration('Full Name'),
-                          style: TextStyle(color: Colors.black),
+                          decoration:
+                              _buildInputDecoration(LocaleKeys.Full_Name.tr()),
+                          style: TextStyle(color: PrimaryColors.Colorthree),
                         ),
                         SizedBox(height: 16),
                         TextField(
                           controller: _emailController,
-                          decoration: _buildInputDecoration('Email'),
-                          style: TextStyle(color: Colors.black),
+                          decoration:
+                              _buildInputDecoration(LocaleKeys.Email.tr()),
+                          style: TextStyle(color: PrimaryColors.Colorthree),
                           keyboardType: TextInputType.emailAddress,
                         ),
                         SizedBox(height: 16),
                         TextField(
                           controller: _countryController,
                           decoration: _buildInputDecoration('Country'),
-                          style: TextStyle(color: Colors.black),
+                          style: TextStyle(color: PrimaryColors.Colorthree),
                         ),
                         SizedBox(height: 16),
                         TextField(
                           controller: _passwordController,
-                          decoration: _buildInputDecoration('Password'),
-                          style: TextStyle(color: Colors.black),
+                          decoration:
+                              _buildInputDecoration(LocaleKeys.Password.tr()),
+                          style: TextStyle(color: PrimaryColors.Colorthree),
                           obscureText: true,
                         ),
                         SizedBox(height: 24),
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            foregroundColor: Colors.yellow,
-                            backgroundColor: Colors.black,
+                            foregroundColor: PrimaryColors.Colortwo,
+                            backgroundColor: PrimaryColors.Colorthree,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(30.0),
                             ),
@@ -193,7 +193,7 @@ class RegistrationScreen extends StatelessWidget {
                                   }
                                 }
                               : null,
-                          child: Text('Register'),
+                          child: Text(LocaleKeys.Register.tr()),
                         ),
                       ],
                     ),

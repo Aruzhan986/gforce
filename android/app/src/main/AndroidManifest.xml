@@ -1,8 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:label="flutter_gforce"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+         <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyDlUEbVj2yY-Un0uAq5xDGcLxLQTlvB16M"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"
